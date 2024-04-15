@@ -1,0 +1,15 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-container {
+    width: 400px;
+    margin: 0 50px;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
