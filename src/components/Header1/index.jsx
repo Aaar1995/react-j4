@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 
 const Header1 = () => {
+    const [searchOpen, setSearchOpen] = useState(false);
+
     return (
         <div className="container">
             <div className="title">Italic</div>
@@ -17,7 +19,11 @@ const Header1 = () => {
             </div>
             <div className="right">
                 <a href="#">Sign In</a>
-                <img src="./Image/Vector.jpg" alt="Search" />
+                {searchOpen ? (
+                    <input type="text" placeholder="Search..." />
+                ) : (
+                    <img src="./Image/Vector.jpg" alt="Search" onClick={() => setSearchOpen(!searchOpen)} />
+                )}
                 <img src="./Image/Frame.jpg" alt="Cart" />
             </div>
         </div>
