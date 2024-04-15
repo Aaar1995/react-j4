@@ -19,11 +19,8 @@ const Header1 = () => {
             </div>
             <div className="right">
                 <a href="#">Sign In</a>
-                {searchOpen ? (
-                    <input type="text" placeholder="Search..." />
-                ) : (
-                    <img src="./Image/Vector.jpg" alt="Search" onClick={() => setSearchOpen(!searchOpen)} />
-                )}
+                <img src="./Image/Vector.jpg" alt="Search" onClick={() => setSearchOpen(!searchOpen)} />
+                {searchOpen && <input type="text" placeholder="Search..." />}
                 <img src="./Image/Frame.jpg" alt="Cart" />
             </div>
         </div>
